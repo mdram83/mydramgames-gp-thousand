@@ -273,9 +273,9 @@ class GameStewardThousand
         $cumulatedPoints = 0;
 
         foreach ($this->marriagesKeys as $points => $pair) {
-            $cumulatedPoints += ($stock->countMatchingKeysCombinations($this->marriagesKeys[$points]) > 0)
-                ? $points
-                : 0;
+            $cumulatedPoints += (
+                $stock->countMatchingKeysCombinations([$this->marriagesKeys[$points]]) > 0 ? $points : 0
+            );
         }
 
         return $cumulatedPoints;
