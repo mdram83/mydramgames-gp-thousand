@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "mdram83/mydramgames-core",
-            "version": "v1.0.004",
+            "version": "v1.0.005",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mdram83/mydramgames-core.git",
-                "reference": "30c8b72fac93b27389a3a727b8bae64c21aa711d"
+                "reference": "cf6621fb590c657e0b4f621c4389f485de3d3fe2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mdram83/mydramgames-core/zipball/30c8b72fac93b27389a3a727b8bae64c21aa711d",
-                "reference": "30c8b72fac93b27389a3a727b8bae64c21aa711d",
+                "url": "https://api.github.com/repos/mdram83/mydramgames-core/zipball/cf6621fb590c657e0b4f621c4389f485de3d3fe2",
+                "reference": "cf6621fb590c657e0b4f621c4389f485de3d3fe2",
                 "shasum": ""
             },
             "require": {
@@ -51,23 +51,23 @@
             ],
             "description": "Core features for MyDramGames project",
             "support": {
-                "source": "https://github.com/mdram83/mydramgames-core/tree/v1.0.004",
+                "source": "https://github.com/mdram83/mydramgames-core/tree/v1.0.005",
                 "issues": "https://github.com/mdram83/mydramgames-core/issues"
             },
-            "time": "2024-09-12T18:49:55+00:00"
+            "time": "2024-09-14T17:26:04+00:00"
         },
         {
             "name": "mdram83/mydramgames-utils",
-            "version": "v1.2.002",
+            "version": "v1.2.003",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mdram83/mydramgames-utils.git",
-                "reference": "a63ef3f669a5725344792508ff1becd521b1d611"
+                "reference": "f1f030067923fc75f4ebafe70415029642a005ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mdram83/mydramgames-utils/zipball/a63ef3f669a5725344792508ff1becd521b1d611",
-                "reference": "a63ef3f669a5725344792508ff1becd521b1d611",
+                "url": "https://api.github.com/repos/mdram83/mydramgames-utils/zipball/f1f030067923fc75f4ebafe70415029642a005ae",
+                "reference": "f1f030067923fc75f4ebafe70415029642a005ae",
                 "shasum": ""
             },
             "require": {
@@ -100,10 +100,10 @@
             ],
             "description": "Utilities for MyDramGames project",
             "support": {
-                "source": "https://github.com/mdram83/mydramgames-utils/tree/v1.2.002",
+                "source": "https://github.com/mdram83/mydramgames-utils/tree/v1.2.003",
                 "issues": "https://github.com/mdram83/mydramgames-utils/issues"
             },
-            "time": "2024-09-04T18:49:00+00:00"
+            "time": "2024-09-14T17:21:14+00:00"
         }
     ],
     "packages-dev": [
@@ -668,16 +668,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "11.3.4",
+            "version": "11.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "d2ef57db1410b102b250e0cdce6675a60c2a993d"
+                "reference": "4dc07a589a68f8f2d5132ac0849146d122e08347"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d2ef57db1410b102b250e0cdce6675a60c2a993d",
-                "reference": "d2ef57db1410b102b250e0cdce6675a60c2a993d",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/4dc07a589a68f8f2d5132ac0849146d122e08347",
+                "reference": "4dc07a589a68f8f2d5132ac0849146d122e08347",
                 "shasum": ""
             },
             "require": {
@@ -698,7 +698,7 @@
                 "phpunit/php-timer": "^7.0.1",
                 "sebastian/cli-parser": "^3.0.2",
                 "sebastian/code-unit": "^3.0.1",
-                "sebastian/comparator": "^6.0.2",
+                "sebastian/comparator": "^6.1.0",
                 "sebastian/diff": "^6.0.2",
                 "sebastian/environment": "^7.2.0",
                 "sebastian/exporter": "^6.1.3",
@@ -748,7 +748,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.3.4"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.3.5"
             },
             "funding": [
                 {
@@ -764,7 +764,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-09T06:08:34+00:00"
+            "time": "2024-09-13T05:22:17+00:00"
         },
         {
             "name": "sebastian/cli-parser",
