@@ -63,7 +63,6 @@ class GamePlayThousandTest extends TestCase
     private PlayerCollection $players;
 
     private GamePhaseThousand $phase;
-    private PlayingCardDealer $cardDealer;
     private PlayingCardDeckProvider $deckProvider;
 
     public function setUp(): void
@@ -74,7 +73,6 @@ class GamePlayThousandTest extends TestCase
         $this->play = $this->getGamePlay();
 
         $this->phase = new GamePhaseThousandBidding();
-        $this->cardDealer = new PlayingCardDealerGeneric();
         $this->deckProvider = new ThousandDeckProvider(
             new PlayingCardCollectionPoweredUnique(),
             new PlayingCardFactoryGeneric(),
