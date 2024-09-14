@@ -2566,9 +2566,6 @@ class GamePlayThousandTest extends TestCase
                 $playerName = $this->play->getActivePlayer()->getName();
                 $this->play->handleMove(new GameMoveThousandPlayCard(
                     $this->play->getActivePlayer(),
-
-                    // FIXME need to make below working- actually to make sure that storage gets and provide proper hand order
-
                     ['card' => $hands[$playerName][$i], 'marriage' => ($i === 1 && $phaseNumber === 1)],
                     $phases[$phaseNumber]
                 ));
