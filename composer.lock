@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "mdram83/mydramgames-core",
-            "version": "v1.0.005",
+            "version": "v1.0.011",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mdram83/mydramgames-core.git",
-                "reference": "cf6621fb590c657e0b4f621c4389f485de3d3fe2"
+                "reference": "73a6b767663c4df5117b183dce376d2940742d0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mdram83/mydramgames-core/zipball/cf6621fb590c657e0b4f621c4389f485de3d3fe2",
-                "reference": "cf6621fb590c657e0b4f621c4389f485de3d3fe2",
+                "url": "https://api.github.com/repos/mdram83/mydramgames-core/zipball/73a6b767663c4df5117b183dce376d2940742d0b",
+                "reference": "73a6b767663c4df5117b183dce376d2940742d0b",
                 "shasum": ""
             },
             "require": {
@@ -51,10 +51,10 @@
             ],
             "description": "Core features for MyDramGames project",
             "support": {
-                "source": "https://github.com/mdram83/mydramgames-core/tree/v1.0.005",
+                "source": "https://github.com/mdram83/mydramgames-core/tree/v1.0.011",
                 "issues": "https://github.com/mdram83/mydramgames-core/issues"
             },
-            "time": "2024-09-14T17:26:04+00:00"
+            "time": "2024-09-16T11:58:15+00:00"
         },
         {
             "name": "mdram83/mydramgames-utils",
@@ -169,16 +169,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v5.1.0",
+            "version": "v5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "683130c2ff8c2739f4822ff7ac5c873ec529abd1"
+                "reference": "23c79fbbfb725fb92af9bcf41065c8e9a0d49ddb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/683130c2ff8c2739f4822ff7ac5c873ec529abd1",
-                "reference": "683130c2ff8c2739f4822ff7ac5c873ec529abd1",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/23c79fbbfb725fb92af9bcf41065c8e9a0d49ddb",
+                "reference": "23c79fbbfb725fb92af9bcf41065c8e9a0d49ddb",
                 "shasum": ""
             },
             "require": {
@@ -221,9 +221,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v5.1.0"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v5.2.0"
             },
-            "time": "2024-07-01T20:03:41+00:00"
+            "time": "2024-09-15T16:40:33+00:00"
         },
         {
             "name": "phar-io/manifest",
