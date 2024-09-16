@@ -28,7 +28,7 @@ class GameMoveFactoryThousand implements GameMoveFactory
     }
 
     /**
-     * @throws GameMoveException
+     * @throws GameMoveException|GamePhaseException
      */
     public function create(Player $player, array $inputs): GameMove
     {
@@ -43,7 +43,7 @@ class GameMoveFactoryThousand implements GameMoveFactory
     }
 
     /**
-     * @throws GameMoveException|GamePhaseException
+     * @throws GameMoveException
      */
     private function getValidatedInputs(array $inputs): array
     {
