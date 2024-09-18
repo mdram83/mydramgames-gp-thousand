@@ -113,9 +113,8 @@ class GameIndexThousandTest extends TestCase
         ));
     }
 
-    public function testCreateGamePlay(): void
+    public function testGetGamePlayClassname(): void
     {
-        $invite = $this->getGameInvite();
-        $this->assertInstanceOf(GamePlayThousand::class, $this->index->createGamePlay($invite));
+        $this->assertEquals(GamePlayThousand::class, $this->index->getGamePlayClassname());
     }
 }

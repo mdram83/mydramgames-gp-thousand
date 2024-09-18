@@ -3,13 +3,10 @@
 namespace MyDramGames\Games\Thousand\Extensions\Core\GameIndex;
 
 use MyDramGames\Core\Exceptions\GameOptionException;
-use MyDramGames\Core\Exceptions\GamePlayException;
 use MyDramGames\Core\GameIndex\GameIndex;
 use MyDramGames\Core\GameIndex\GameIndexStorableBase;
-use MyDramGames\Core\GameInvite\GameInvite;
 use MyDramGames\Core\GameMove\GameMove;
 use MyDramGames\Core\GameMove\GameMoveFactory;
-use MyDramGames\Core\GamePlay\GamePlay;
 use MyDramGames\Core\GameSetup\GameSetup;
 use MyDramGames\Games\Thousand\Extensions\Core\GameMove\GameMoveFactoryThousand;
 use MyDramGames\Games\Thousand\Extensions\Core\GamePlay\GamePlayThousand;
@@ -26,6 +23,8 @@ class GameIndexThousand extends GameIndexStorableBase implements GameIndex
     public const ?int MIN_PLAYER_AGE = 10;
     public const bool IS_ACTIVE = true;
     public const bool IS_PREMIUM = false;
+
+    protected const string GAMEPLAY_CLASSNAME = GamePlayThousand::class;
 
     protected GameMoveFactory $gameMoveFactory;
 
@@ -52,15 +51,5 @@ class GameIndexThousand extends GameIndexStorableBase implements GameIndex
     public function createGameMove(Player $player, array $inputs): GameMove
     {
         return $this->gameMoveFactory->create($player, $inputs);
-    }
-
-    /**
-     * @inheritDoc
-     * @throws GamePlayException
-     */
-    public function createGamePlay(GameInvite $gameInvite): GamePlay
-    {
-        $storage = $this->gamePlayStorageFactory->create($gameInvite);
-        return new GamePlayThousand($storage, $this->gamePlayServicesProvider);
     }
 }
