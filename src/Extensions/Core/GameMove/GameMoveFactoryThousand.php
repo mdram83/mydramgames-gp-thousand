@@ -20,32 +20,25 @@ use MyDramGames\Utils\Player\Player;
 
 class GameMoveFactoryThousand implements GameMoveFactory
 {
-    private GamePhaseThousandRepository $phaseRepository;
-
-    public function __construct()
-    {
-        $this->phaseRepository = new GamePhaseThousandRepository();
-    }
-
     /**
-     * @throws GameMoveException|GamePhaseException
+     * @throws GameMoveException
      */
-    public function create(Player $player, array $inputs): GameMove
+    public static function create(Player $player, array $inputs): GameMove
     {
-        [$phaseKey, $data, $phase] = $this->getValidatedInputs($inputs);
+        [$phaseKey, $data, $phase] = self::getValidatedInputs($inputs);
 
         if ($phaseKey === 'sorting') {
             return new GameMoveThousandSorting($player, $data, $phase);
         }
 
-        $className = $this->getPhaseRelatedMoveClass($phase);
+        $className = self::getPhaseRelatedMoveClass($phase);
         return new $className($player, $data, $phase);
     }
 
     /**
      * @throws GameMoveException
      */
-    private function getValidatedInputs(array $inputs): array
+    protected static function getValidatedInputs(array $inputs): array
     {
         $phaseKey = $inputs['phase'] ?? null;
         $data = $inputs['data'] ?? null;
@@ -55,7 +48,7 @@ class GameMoveFactoryThousand implements GameMoveFactory
         }
 
         try {
-            $phase = $this->phaseRepository->getOne($phaseKey);
+            $phase = (new GamePhaseThousandRepository())->getOne($phaseKey);
         } catch (GamePhaseException) {
 
         }
@@ -67,7 +60,7 @@ class GameMoveFactoryThousand implements GameMoveFactory
         return [$phaseKey, $data, $phase ?? null];
     }
 
-    private function getPhaseRelatedMoveClass(GamePhaseThousand $phase): string
+    protected static function getPhaseRelatedMoveClass(GamePhaseThousand $phase): string
     {
         $moves = [
             GamePhaseThousandBidding::PHASE_KEY => GameMoveThousandBidding::class,
