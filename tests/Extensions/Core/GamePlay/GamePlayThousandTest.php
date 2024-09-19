@@ -20,6 +20,7 @@ use MyDramGames\Core\GamePlay\Storage\GamePlayStorage;
 use MyDramGames\Core\GamePlay\Storage\GamePlayStorageInMemory;
 use MyDramGames\Core\GameRecord\GameRecordCollectionPowered;
 use MyDramGames\Games\Thousand\Extensions\Core\Exceptions\GamePlayThousandException;
+use MyDramGames\Games\Thousand\Extensions\Core\GameMove\GameMoveFactoryThousand;
 use MyDramGames\Games\Thousand\Extensions\Core\GameMove\GameMoveThousand;
 use MyDramGames\Games\Thousand\Extensions\Core\GameMove\GameMoveThousandBidding;
 use MyDramGames\Games\Thousand\Extensions\Core\GameMove\GameMoveThousandCollectTricks;
@@ -97,7 +98,18 @@ class GamePlayThousandTest extends TestCase
     protected function getGameInvite(bool $fourPlayers = false, bool $barrel = true): GameInvite
     {
         $setup = new GameSetupThousand(new GameOptionCollectionPowered(), new GameOptionValueCollectionPowered());
-        $box = new GameBoxGeneric('thousand', 'Thousand', $setup, true, false, null, null, null);
+        $box = new GameBoxGeneric(
+            'thousand',
+            'Thousand',
+            $setup,
+            GamePlayThousand::class,
+            GameMoveFactoryThousand::class,
+            true,
+            false,
+            null,
+            null,
+            null
+        );
         $configurations = new GameOptionConfigurationCollectionPowered(null, [
             new GameOptionConfigurationGeneric(
                 'numberOfPlayers',
