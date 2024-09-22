@@ -51,7 +51,7 @@ class GameSetupThousand extends GameSetupBase implements GameSetup
                         GameOptionValueForfeitAfterGeneric::Minutes5,
                     ]),
                     GameOptionValueForfeitAfterGeneric::Disabled,
-                    GameOptionTypeGeneric::Checkbox
+                    GameOptionTypeGeneric::Radio
                 ),
 
                 new GameOptionThousandBarrelPointsGeneric(
